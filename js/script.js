@@ -6,9 +6,9 @@ $('.slick-slider').slick({
   arrows: false,
   responsive: [
     {
-      breakpoint: 768, // Small screens ke liye
+      breakpoint: 768,
       settings: {
-        slidesToShow: 1, // Ek slide show karega
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000
@@ -38,7 +38,7 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
 
 // validation
 document.getElementById('contactForm').addEventListener('submit', function (event) {
-  event.preventDefault() // Prevent form submission for validation
+  event.preventDefault()
 
   // Clear previous error messages and remove red borders
   document.querySelectorAll('.error-message').forEach(error => error.style.display = 'none')
@@ -101,7 +101,7 @@ $('#ajaxForm').submit(function (e) {
 
   $.ajax({
     type: 'POST',
-    url: 'https://getform.io/f/bzyyjpya',
+    url: 'https://formcarry.com/s/jYsqBr-VFgd',
     crossDomain: true,
     data: new FormData(this),
     dataType: 'json',

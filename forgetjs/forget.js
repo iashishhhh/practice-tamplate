@@ -1,18 +1,19 @@
 document.getElementById('forgotPasswordForm').addEventListener('submit', function (event) {
   event.preventDefault()
+  
   // Clear previous errors
   clearErrors()
 
-  const email = document.getElementById('email').value.trim()
-
+  const emailInput = document.getElementById('email')
+  const email = emailInput.value.trim()
   let isValid = true
 
   // Custom validation for email
   if (email === '') {
-    alert('Email is required!')
+    emailInput.classList.add('invalid')  // Add red border for invalid input
     isValid = false
   } else if (!validateEmail(email)) {
-    alert('Please enter a valid email address.')
+    emailInput.classList.add('invalid')  // Add red border for invalid input
     isValid = false
   }
 
@@ -30,10 +31,12 @@ document.getElementById('forgotPasswordForm').addEventListener('submit', functio
   }
 })
 
-function validateEmail (email) {
+function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailRegex.test(email)
 }
 
-function clearErrors () {
+function clearErrors() {
+  const emailInput = document.getElementById('email')
+  emailInput.classList.remove('invalid')  // Remove red border when clearing errors
 }

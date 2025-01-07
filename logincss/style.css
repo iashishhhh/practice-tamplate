@@ -30,3 +30,14 @@
     padding-right: 25px;
     border-radius: 8px;
 }
+
+.invalid {
+    border: 2px solid red !important; /* Red border for invalid input */
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
