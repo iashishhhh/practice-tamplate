@@ -10,7 +10,7 @@ body {
 .signup-box {
     background: rgba(255, 255, 255, 0.753);
     padding: 30px;
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
