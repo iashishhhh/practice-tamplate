@@ -55,6 +55,11 @@ document.getElementById('passwordResetForm').addEventListener('submit', function
       localStorage.setItem('userData', JSON.stringify(storedUserData))
 
       alert('Password successfully updated.')
+
+      // Redirect to a success page (for example, dashboard.html)
+      window.location.href = 'login.html'  // Change 'dashboard.html' to your desired page
+
+      // Reset the form (not necessary if you redirect before this)
       document.getElementById('passwordResetForm').reset()
     } else {
       // Email not found
